@@ -18,9 +18,14 @@ def save_winner():
 
     winner.save()
     if winner.id != 0:
-        return jsonify({"success": True, "id": winner.id}), 201
+        return jsonify({"success": True, "id": winner.id, "mesajito":"hola"}), 201
     else:
         return jsonify({"success": False}), 500
+
+@app.route('/winners', methods=['GET'])
+def get_winners():
+    return render_template('winners.html', winners = Winner.get_all())
+    
 
 
 if __name__ == '__main__':

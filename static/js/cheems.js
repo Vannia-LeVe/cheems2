@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
                 name: name,
                  email: email, 
                  phrase: phrase
+                 //intentos:intentos
             })
         })
         .then(response => {
